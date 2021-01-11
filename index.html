@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>hello</title>
+<link rel="preconnect" href="https://fonts.gstatic.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet"/>
+<style>
+body {
+  background-image:url('img/background.png');
+  background-size: auto;
+}
+.container {
+	position: absolute;
+	max-width: 100%;
+	height: auto;
+		margin-left: 60%;
+	margin-top: 7.5%;
+}
+image {
+  max-width: 100%;
+  height: auto;      }
+.overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-image: url('img/avatar.png');
+}
+  .container:hover .overlay {
+  opacity: 1;
+}  
+.ml2 {
+  font-weight: 900;
+  font-size: 2.5vw;
+  left: 16px;
+  color:white;
+    font-family: 'Cedarville Cursive', cursive;   
+
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 0em;
+  color:white;
+    font-family: 'Cedarville Cursive', cursive;  
+    } 
+.ml3 {
+  font-weight: 900;
+ font-size: 4vw;
+   left: 16px;
+  color:white;
+    font-family: 'Cedarville Cursive', cursive;   
+
+}
+
+.ml3 .letter {
+  display: inline-block;
+  line-height: 0em;
+  color:white;
+    font-family: 'Cedarville Cursive', cursive;   
+}
+
+.button {
+  background-color: transparent; 
+  border: none;
+  color: white;
+  padding: 20px 30px;
+  text-align: center;
+  text-decoration: none;
+display:inline-block;
+  font-size: 3vw;
+  margin: 0.5% 20%;
+  transition-duration: 0.4s;
+  max-height:15vw;
+  min-width:30vw;
+  cursor: pointer;
+  font-family: 'Cedarville Cursive', cursive; 
+}
+
+.button1 {
+  background-color: white; 
+  color: #62ceff; 
+
+}
+
+.button1:hover {
+  background-color: transparent;;
+  color: white;
+    border: none;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+
+}    
+</style>
+
+
+</head>
+
+<body>
+<div class="container">
+  <img src="img/avatar1.png" alt="Avatar" class="image"/>
+  <div class="overlay">
+  </div>
+</div> 
+<h1 class="ml2">#bibievarha</h1>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+<script>
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    
+  });
+  </script>
+
+
+  <h1 class="ml3">Hi, thanks for visiting my portfolio!</h1>
+
+
+<script>
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml3 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml3',
+    
+  });
+  </script>
+<button class="button button1">Who am I?</button>
+<button class="button button1">Proects</button>
+<button class="button button1">Contacts</button>
+
+
+  </body>
+
+</html>
